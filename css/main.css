@@ -1,0 +1,224 @@
+/* Author: Vikram Kamalakannan;
+Filename: main.css;
+Date: 14 November 2018; */
+
+/**************************************************
+Fonts
+Droid Serif
+Droid Sans
+Droid Sans Mono
+IM Fell DW Pica
+Marmelad
+Marvel
+Roboto Slab
+Allerta Stencil
+
+Font Scaling
+6.854rem
+3.236rem
+4.236rem
+2.618rem
+1.618rem
+1.3rem
+1.0rem
+0.618rem
+
+Colour scheme
+
+**************************************************/
+/* Imported all Fonts from fonts.google.com used inside HTML */
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif|IM+Fell+DW+Pica|Marmelad|Marvel|Roboto+Slab|Allerta+Stencil'; 
+
+*{
+    padding: 0; /* Padding 0 to whole css default */
+    margin: 0; /* Margin 0 to whole css default */
+    box-sizing: border-box; /* Border box sizing */
+}
+html{
+    font-size: 16px; /* Added font-size */
+    line-height: 1.6; /* Added line-height */
+    font-family: 'Droid Sans', 'more font stack stuff', sans-serif;
+    background: url('../img/placeimg_640_480_sepia_nature.jpg'); /* Added Background image to whole html */
+    background-size: 100% 100%; /* Resized the img width & height to 100% to exactly stretch and fit the whole html */
+}
+/*************************** 
+DEFAULTS - MOBILE FIRST 
+***************************/
+h1{
+    width:100%; /* Spreads to whole width */
+    font: bold 4.236rem 'IM Fell DW Pica', 'more font stack stuff', serif; /* Added Font Style */
+    text-align: center; /* Aligned text to center */
+    color: #ff14d2; /* Set heading color pink */
+    margin: 60px; /* Margin around h1 */
+}
+h2{
+    font: bold 2.618rem 'Roboto Slab', 'more font stack stuff', serif;
+    text-align: center; /* Aligned to center for heading */
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 15px; /* Added Border-radius to get a corner edge */
+    margin:20px;
+}
+li, p, a{
+    font: bold 1.618rem 'Marvel', 'more font stack stuff', sans-serif; padding:8px; /* Padded to get a space between paragraphs, list item and links */
+}
+pre, code, kbd{
+    font: normal 1.0rem 'Marmelad', 'more font stack stuff', 
+}
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+
+/* Wrapper is given flex to get the whole document within this */
+.wrapper{
+    width: 95%; /* Width of wrapper - 95% */
+    padding-top: 25px; /* Padded at top to get a space at top */
+    padding-bottom: 25px; /* Padded at bottom to get a space at bottom */
+    margin: 0 auto; /* Left align margin, then set auto */
+    justify-content: center; /* Justified each contents inside .wrapper to center */
+    display: flex; /* Displayed as flex */
+    flex-flow: row wrap; /* <header>,<nav>,<main>,<footer> aligned as a row */
+    border-radius: 25px; /* Curved borders */
+}
+
+header{
+    display: flex; /* Displayed as flex */
+    flex-flow: row wrap;
+    height: 250px; /* Assigned height to avoid oversized height */
+    width: 100%; /* Width spreads fully inside wrapper width 95% */
+    background-image: url('../img/placeimg_1000_350_nature.jpg'); /* Added bg image */
+    background-size: 100% 100%; /* Resized bg img to fit the header */
+    border-radius: 25px; /* Curved borders */
+    margin-top:5px; /* Margin on top of header */
+    margin-bottom:5px; /* Margin on bottom of header */
+}
+nav{
+    width: 100%; /* Width fully spreads to wrapper */
+    background-color: #00c1ef; /* Added bg color */
+    border-radius: 25px; /* Curved borders */
+    margin-top:5px; /* Margin on top of nav */
+    margin-bottom:5px; /* Margin on bottom of nav */
+}
+nav>ul{
+    width: 100%; /* Width of ul fully spreads to nav tag */
+    display: grid; /* Displayed as grid */
+}
+nav li{
+    list-style: none; /* Removes bulltes for unordered list */
+    text-align: center; /* Aligned text to center */
+}
+nav a,
+nav a:link,
+nav a:visited{
+    display: block; /* Displayed as block */
+    font: bold 1.618rem 'Allerta Stencil', 'more font stack stuff', sans-serif; /* Assigned font-style, font-size & font-family inside font property */
+    color: #ffffff; /* Added text color to anchor tag */
+    background-color: #000000; /* Added bg color */
+    border-radius: 15px; /* Rounded border */
+    margin:3px; /* Margin on all sides with 5px */
+}
+
+.main
+{
+    width:100%; /* Width spreads fully to wrapper */
+    background-color: #00ffff; /* Added bg color */
+    border-radius: 25px; /* Rounded border */
+    margin-top:5px; /* Margin at top for 5px */
+    margin-bottom:5px; /* Margin at bottom for 5px */
+}
+
+.col first{
+    width:100%; /* Main heading content width 100% */
+}
+
+.col second{
+    width:100%; /* Secondary heading content width 100% */
+}
+
+.col{
+    text-align: justify; /* Justified text for both heading content */ 
+    padding: 15px 15px 15px 15px; /* paddded top, right, bottom, left */
+}
+
+.col img{
+    width: 100%; /* Img inside col width 100% */
+    height: auto; /* Height adjusted to auto */
+    max-width: 100%; /* Max-width is 100% */
+    float: left; /* Floated left to avoid colliding text */
+    margin: 5px; /* Margin 5px on all sides top, bottom, left, right */
+}
+.footer{
+    width:100%; /* Spreads to whole wrapper width */
+    background-color: #7fffd4;  /* Added bg color */
+    border-radius: 25px; /* Rounded border radius on all sides */
+    margin-top:5px; /* Added margin on top */
+}
+.footer>p{padding:5px;} /* Added padding to <p> tag in footer */
+.footer>ul{display: flex; width:100%;flex-wrap:column wrap; } /* Displayed flex for ul tag and wrapped as column */
+.footer>ul>li{padding-left: 15px; padding-right: 15px; flex-wrap: wrap; display: inline-block;} /* Added inline-block to list all items inside ul tag in single line */
+
+/* Screen width > 1200px - Extra Large*/
+@media screen and (max-width: 2400px) and (min-width:1201px) {
+    header{width:100%;} /* header - 100% as given */
+    nav{width:30%;} /* nav - 30% as given */
+    nav li{margin: 30px; background-color: #f0f8ff;}
+    nav>ul{width:100%;} /* links - 100% of nav as given */
+    .main{width:70%; display: flex;} /* main - 70% as given */
+    .col first{width:50%;} /* columns - 50% of main as given */
+    .col second{width:50%;} /* columns - 50% of main as given */
+    .col img{width: 55%;} /* column image - 55% of column width as given */
+    .footer{width:100%;} /* footer - 100% as given */
+}
+
+/* Screen width < 1200px - Large */
+@media screen and (max-width: 1200px) and (min-width: 801px) {
+    header{display: flex; width:100%;} /* header - 100% as given */
+    nav{display: inline-flex; width:90%;} /* nav - 90% as given */
+    /* Added inline-flex to align all nav links in a same line and wrapped it */
+    nav a,nav a:link,nav a:visited{
+        display: block; /* Displayed as block */
+        font: bold 1.30rem 'Allerta Stencil', 'more font stack stuff', sans-serif;} /* Assigned font-style, font-size & font-family inside font property */
+    .mainnav{display: inline-flex; flex-wrap: wrap; width:100%;}
+    .mainnav>li{display: inline; width:20%;} /* links - 20% of nav as given */
+    .main{width:90%; display: flex;} /* main - 90% as given */
+    .col first{width:50%;} /* columns - 50% of main as given */
+    .col second{width:50%;} /* columns - 50% of main as given */
+    .col img{width: 50%;} /* column image - 50% of column as given */
+    .footer{width:100%;} /* footer - 100% as given */
+    
+}
+
+/* Screen width < 800px - Medium */
+@media screen and (max-width: 800px) and (min-width: 601px){
+    .wrapper{width:100%;} /* wrapper - 100% as given */
+    header{display: flex; width:100%; margin:5px;} /* header - 100% as given */
+    nav{display: flex; flex-wrap:wrap; width:90%; border: 8px solid blue;} /* nav - 90% as given */
+    /* Added inline-flex to align all nav links in a same line and wrapped it */
+    .mainnav{display: inline-flex; flex-wrap: nowrap; width:100%; }
+    .mainnav>li{display: inline; width:20%; font-size: 6px;} /* links - 20% of nav as given */
+    nav a,nav a:link,nav a:visited{
+        display: block; /* Displayed as block */
+        font: bold 1.00rem 'Allerta Stencil', 'more font stack stuff', sans-serif;} /* Assigned font-style, font-size & font-family inside font property */
+    .main{width:90%; display: flex;} /* main - 90% as given */
+    .col first{width:50%;} /* columns - 50% of main as given */
+    .col second{width:50%;} /* columns - 50% of main as given */
+    .col img{width: 60%;} /* column image - 60% of column as given */
+    .footer{width:90%;} /* footer - 90% as given */
+}
+
+/* Screen width < 600px - Small */
+@media screen and (max-width: 600px) and (min-width: 300px){
+    .wrapper{width:95%;} /* wrapper - 95% as given */
+    header{display: flex; width:100%;} /* header - 100% of wrapper as given */
+    nav{width:100%;} /* nav - 100% of wrapper as given */
+    nav>li{width:100%;} /* links - 100% of nav as given */
+    main{width:100%;} /* main - 100% of wrapper as given */
+    .col first{width:100%;} /* columns - 100% of main as given */
+    .col second{width:100%;} /* columns - 100% of main as given */
+    .col img{width: 100%;} /* column image - 100% of column as given */
+    .footer{width:100%;} /* footer - 100% of wrapper */
+    h1{width:100%; font: bold 3.236rem 'IM Fell DW Pica', 'more font stack stuff', serif; margin:40px;} 
+    /* Resized font-size as width become small */
+}
+
+
